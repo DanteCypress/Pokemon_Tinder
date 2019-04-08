@@ -1,0 +1,2313 @@
+  [1m[35m (488.0ms)[0m  [1m[35mCREATE DATABASE "pokemon_tinder_development" ENCODING = 'unicode'[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (399.9ms)[0m  [1m[35mCREATE DATABASE "pokemon_tinder_test" ENCODING = 'unicode'[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (48.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (45.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8113914173078461440)[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreatePokemons (20190403212000)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" bigserial primary key, "name" character varying, "age" integer, "enjoys" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190403212000_create_pokemons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190403212000"]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-03 21:20:15.318357"], ["updated_at", "2019-04-03 21:20:15.318357"]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8113914173078461440)[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPokemon Create (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 5], ["enjoys", "Zapping niggas"], ["created_at", "2019-04-03 22:21:01.968891"], ["updated_at", "2019-04-03 22:21:01.968891"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPokemon Create (4.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "WarTurtle"], ["age", 2], ["enjoys", "Surfing"], ["created_at", "2019-04-04 18:13:05.650466"], ["updated_at", "2019-04-04 18:13:05.650466"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Venasaur"], ["age", 12], ["enjoys", "Food mostly, really just food."], ["created_at", "2019-04-04 18:13:05.658004"], ["updated_at", "2019-04-04 18:13:05.658004"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+Started GET "/pokemons" for ::1 at 2019-04-04 11:24:49 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PokemonsController#index as HTML
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-05 14:00:36 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-05 14:00:41 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-05 14:00:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pokemons" for ::1 at 2019-04-05 14:01:40 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (40.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 53ms (Views: 6.2ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:03:37 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/pokemons" for ::1 at 2019-04-05 14:05:01 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:10:55 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:11:06 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:11:41 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:12:19 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 14:51:21 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:05:56 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:08:40 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:12:26 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:14:53 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:15:23 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:20:19 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:20:20 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:20:21 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:20:21 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:21:37 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:22:14 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:27:13 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:27:54 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:35:38 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:36:47 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:47 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"", "age"=>"", "enjoys"=>""}}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (42.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 422 Unprocessable Entity in 49ms (Views: 0.1ms | ActiveRecord: 44.5ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:48 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:51 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"P", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"P", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (8.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "P"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:51.471333"], ["updated_at", "2019-04-05 22:36:51.471333"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:51 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pi", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pi", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pi"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:51.663387"], ["updated_at", "2019-04-05 22:36:51.663387"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:51 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pik", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pik", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pik"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:51.797796"], ["updated_at", "2019-04-05 22:36:51.797796"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:52 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pika", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pika", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pika"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:52.164620"], ["updated_at", "2019-04-05 22:36:52.164620"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:52 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikac", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pikac", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (6.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pikac"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:52.602795"], ["updated_at", "2019-04-05 22:36:52.602795"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:52 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikach", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pikach", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pikach"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:52.716935"], ["updated_at", "2019-04-05 22:36:52.716935"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:52 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pikachu", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pikachu"], ["enjoys", ""], ["created_at", "2019-04-05 22:36:52.806532"], ["updated_at", "2019-04-05 22:36:52.806532"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:53 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"1", "enjoys"=>"", "pokemon"=>{"name"=>"Pikachu", "age"=>"1", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 1], ["enjoys", ""], ["created_at", "2019-04-05 22:36:53.532325"], ["updated_at", "2019-04-05 22:36:53.532325"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:53 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", ""], ["created_at", "2019-04-05 22:36:53.644596"], ["updated_at", "2019-04-05 22:36:53.644596"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:54 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"S", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"S"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "S"], ["created_at", "2019-04-05 22:36:54.833707"], ["updated_at", "2019-04-05 22:36:54.833707"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:55 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"St", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"St"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "St"], ["created_at", "2019-04-05 22:36:55.064146"], ["updated_at", "2019-04-05 22:36:55.064146"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:55 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stu", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stu"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stu"], ["created_at", "2019-04-05 22:36:55.131378"], ["updated_at", "2019-04-05 22:36:55.131378"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:55 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stun", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stun"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stun"], ["created_at", "2019-04-05 22:36:55.236858"], ["updated_at", "2019-04-05 22:36:55.236858"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:55 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunn", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunn"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stunn"], ["created_at", "2019-04-05 22:36:55.385909"], ["updated_at", "2019-04-05 22:36:55.385909"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:56 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunni", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunni"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stunni"], ["created_at", "2019-04-05 22:36:56.357316"], ["updated_at", "2019-04-05 22:36:56.357316"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:56 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunnin", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunnin"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stunnin"], ["created_at", "2019-04-05 22:36:56.427909"], ["updated_at", "2019-04-05 22:36:56.427909"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:36:56 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunnin'", "pokemon"=>{"name"=>"Pikachu", "age"=>"12", "enjoys"=>"Stunnin'"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 12], ["enjoys", "Stunnin'"], ["created_at", "2019-04-05 22:36:56.646786"], ["updated_at", "2019-04-05 22:36:56.646786"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 43ms (Views: 0.3ms | ActiveRecord: 41.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:37:24 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"112", "enjoys"=>"Stunnin'", "pokemon"=>{"name"=>"Pikachu", "age"=>"112", "enjoys"=>"Stunnin'"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 112], ["enjoys", "Stunnin'"], ["created_at", "2019-04-05 22:37:24.812473"], ["updated_at", "2019-04-05 22:37:24.812473"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:37:25 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"1112", "enjoys"=>"Stunnin'", "pokemon"=>{"name"=>"Pikachu", "age"=>"1112", "enjoys"=>"Stunnin'"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 1112], ["enjoys", "Stunnin'"], ["created_at", "2019-04-05 22:37:25.010772"], ["updated_at", "2019-04-05 22:37:25.010772"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:37:25 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"11112", "enjoys"=>"Stunnin'", "pokemon"=>{"name"=>"Pikachu", "age"=>"11112", "enjoys"=>"Stunnin'"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pikachu"], ["age", 11112], ["enjoys", "Stunnin'"], ["created_at", "2019-04-05 22:37:25.324847"], ["updated_at", "2019-04-05 22:37:25.324847"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:40:31 -0700
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:31 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:31 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:42 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"C", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"C", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "C"], ["enjoys", ""], ["created_at", "2019-04-05 22:40:42.289073"], ["updated_at", "2019-04-05 22:40:42.289073"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:42 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Ch", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Ch", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ch"], ["enjoys", ""], ["created_at", "2019-04-05 22:40:42.437713"], ["updated_at", "2019-04-05 22:40:42.437713"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:42 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Cha", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Cha", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cha"], ["enjoys", ""], ["created_at", "2019-04-05 22:40:42.605741"], ["updated_at", "2019-04-05 22:40:42.605741"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:40:42 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Char", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Char", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Char"], ["enjoys", ""], ["created_at", "2019-04-05 22:40:42.703039"], ["updated_at", "2019-04-05 22:40:42.703039"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:41:29 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:41:31 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:42:28 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:42:31 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:44:15 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:46:23 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:48:00 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:52:21 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:53:29 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:54:38 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:54:46 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:56:21 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:58:07 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:58:14 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"123", "age"=>"123", "enjoys"=>"123", "pokemon"=>{"name"=>"123", "age"=>"123", "enjoys"=>"123"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "123"], ["age", 123], ["enjoys", "123"], ["created_at", "2019-04-05 22:58:14.889562"], ["updated_at", "2019-04-05 22:58:14.889562"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:59:34 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 15:59:47 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"1234", "age"=>"12", "enjoys"=>"1234", "pokemon"=>{"name"=>"1234", "age"=>"12", "enjoys"=>"1234"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "1234"], ["age", 12], ["enjoys", "1234"], ["created_at", "2019-04-05 22:59:47.977956"], ["updated_at", "2019-04-05 22:59:47.977956"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 15:59:54 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 16:00:05 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"123", "age"=>"213", "enjoys"=>"123", "pokemon"=>{"name"=>"123", "age"=>"213", "enjoys"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "123"], ["age", 213], ["enjoys", "123"], ["created_at", "2019-04-05 23:00:05.277056"], ["updated_at", "2019-04-05 23:00:05.277056"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:00:49 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 16:00:54 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"123", "age"=>"123", "enjoys"=>"123", "pokemon"=>{"name"=>"123", "age"=>"123", "enjoys"=>"123"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "123"], ["age", 123], ["enjoys", "123"], ["created_at", "2019-04-05 23:00:54.214467"], ["updated_at", "2019-04-05 23:00:54.214467"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 23ms (Views: 4.6ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 16:00:58 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"1233444", "age"=>"123", "enjoys"=>"123", "pokemon"=>{"name"=>"1233444", "age"=>"123", "enjoys"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.2ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "1233444"], ["age", 123], ["enjoys", "123"], ["created_at", "2019-04-05 23:00:58.711594"], ["updated_at", "2019-04-05 23:00:58.711594"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:02:35 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 16:02:39 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"123", "age"=>"1231323", "enjoys"=>"12312323", "pokemon"=>{"name"=>"123", "age"=>"1231323", "enjoys"=>"12312323"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "123"], ["age", 1231323], ["enjoys", "12312323"], ["created_at", "2019-04-05 23:02:39.756875"], ["updated_at", "2019-04-05 23:02:39.756875"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-05 16:20:12 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:20:16 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:21:05 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:21:08 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:21:27 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:22:09 -0700
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:25:08 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:25:29 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+    flash [:notice] = 'Pokemon Profile Deleted'
+                    ^
+/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:19: syntax error, unexpected '=', expecting end
+app/controllers/pokemons_controller.rb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:26:02 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:27: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:27: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:26:07 -0700
+  
+SyntaxError (/Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/app/controllers/pokemons_controller.rb:27: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/pokemons_controller.rb:27: syntax error, unexpected end-of-input, expecting end
+Started GET "/pokemons" for ::1 at 2019-04-05 16:26:31 -0700
+Processing by PokemonsController#index as HTML
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:26:36 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:28:57 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:28:57 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:34:54 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:34:54 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (1.1ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:44:20 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:45:53 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:46:06 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:46:46 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-05 16:47:34 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:47:36 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:47:50 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:47:51 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:48:12 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:49:25 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 16:49:55 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:04:58 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:05:59 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:09:27 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:09:53 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:10:22 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:12:49 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:13:47 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pokemons:id" for ::1 at 2019-04-05 17:13:49 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/pokemons:id"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-05 17:14:15 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:14:20 -0700
+Processing by PokemonsController#index as HTML
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:16:02 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:16:27 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-05 17:16:37 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pokemons/1" for ::1 at 2019-04-05 17:16:40 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>1, "id"=>"1", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (44.9ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 66ms (Views: 4.5ms | ActiveRecord: 46.7ms)
+
+
+Started DELETE "/pokemons/2" for ::1 at 2019-04-05 17:16:42 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>2, "id"=>"2", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 6.4ms)
+
+
+Started DELETE "/pokemons/3" for ::1 at 2019-04-05 17:16:45 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>3, "id"=>"3", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/pokemons/4" for ::1 at 2019-04-05 17:16:46 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>4, "id"=>"4", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/pokemons/5" for ::1 at 2019-04-05 17:16:47 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>5, "id"=>"5", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/pokemons/6" for ::1 at 2019-04-05 17:16:47 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>6, "id"=>"6", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/pokemons/7" for ::1 at 2019-04-05 17:16:47 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>7, "id"=>"7", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/pokemons/8" for ::1 at 2019-04-05 17:16:47 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>8, "id"=>"8", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/pokemons/9" for ::1 at 2019-04-05 17:16:47 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>9, "id"=>"9", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/pokemons/10" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>10, "id"=>"10", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/pokemons/11" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>11, "id"=>"11", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 12ms (Views: 3.0ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/pokemons/12" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>12, "id"=>"12", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/pokemons/13" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>13, "id"=>"13", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/14" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>14, "id"=>"14", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/pokemons/15" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>15, "id"=>"15", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 2.3ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/16" for ::1 at 2019-04-05 17:16:48 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>16, "id"=>"16", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/pokemons/17" for ::1 at 2019-04-05 17:16:49 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>17, "id"=>"17", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/pokemons/18" for ::1 at 2019-04-05 17:16:49 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>18, "id"=>"18", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/pokemons/19" for ::1 at 2019-04-05 17:16:49 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>19, "id"=>"19", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/pokemons/20" for ::1 at 2019-04-05 17:16:49 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>20, "id"=>"20", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/21" for ::1 at 2019-04-05 17:16:49 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>21, "id"=>"21", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 6.4ms)
+
+
+Started DELETE "/pokemons/22" for ::1 at 2019-04-05 17:16:50 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>22, "id"=>"22", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/23" for ::1 at 2019-04-05 17:16:50 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>23, "id"=>"23", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/pokemons/24" for ::1 at 2019-04-05 17:16:50 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>24, "id"=>"24", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/pokemons/25" for ::1 at 2019-04-05 17:16:51 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>25, "id"=>"25", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 6.4ms)
+
+
+Started DELETE "/pokemons/26" for ::1 at 2019-04-05 17:16:51 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>26, "id"=>"26", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/27" for ::1 at 2019-04-05 17:16:51 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>27, "id"=>"27", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/pokemons/28" for ::1 at 2019-04-05 17:16:51 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>28, "id"=>"28", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 6.4ms)
+
+
+Started DELETE "/pokemons/29" for ::1 at 2019-04-05 17:16:52 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>29, "id"=>"29", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/pokemons/30" for ::1 at 2019-04-05 17:16:52 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>30, "id"=>"30", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 30]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (2.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 9.1ms)
+
+
+Started DELETE "/pokemons/31" for ::1 at 2019-04-05 17:16:53 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>31, "id"=>"31", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 31]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/pokemons/32" for ::1 at 2019-04-05 17:16:53 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>32, "id"=>"32", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 32]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/pokemons/33" for ::1 at 2019-04-05 17:16:53 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>33, "id"=>"33", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 33]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-05 19:32:32 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Bulbasaur", "age"=>"12", "enjoys"=>"Sunlight", "pokemon"=>{"name"=>"Bulbasaur", "age"=>"12", "enjoys"=>"Sunlight"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.6ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bulbasaur"], ["age", 12], ["enjoys", "Sunlight"], ["created_at", "2019-04-06 02:32:32.324067"], ["updated_at", "2019-04-06 02:32:32.324067"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 44ms (Views: 0.9ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-06 10:34:40 -0700
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-06 10:34:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pokemons" for ::1 at 2019-04-06 10:34:44 -0700
+Processing by PokemonsController#index as HTML
+  [1m[36mPokemon Load (42.0ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 58ms (Views: 7.2ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-06 10:35:11 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-06 10:37:05 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Charizard", "age"=>"12", "enjoys"=>"Fire", "pokemon"=>{"name"=>"Charizard", "age"=>"12", "enjoys"=>"Fire"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (3.8ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charizard"], ["age", 12], ["enjoys", "Fire"], ["created_at", "2019-04-06 17:37:05.823101"], ["updated_at", "2019-04-06 17:37:05.823101"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 14ms (Views: 1.1ms | ActiveRecord: 48.0ms)
+
+
+Started DELETE "/pokemons/34" for ::1 at 2019-04-07 08:02:40 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>34, "id"=>"34", "pokemon"=>{}}
+  [1m[36mPokemon Load (1.9ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (3.4ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 34]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 79ms (Views: 3.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:07:03 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:08:35 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:08:44 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:13:54 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:16:25 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:16:31 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pokemons/35" for ::1 at 2019-04-07 08:16:34 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>35, "id"=>"35", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 35]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-07 08:16:44 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Charizard", "age"=>"1", "enjoys"=>"Fire", "pokemon"=>{"name"=>"Charizard", "age"=>"1", "enjoys"=>"Fire"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (8.0ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charizard"], ["age", 1], ["enjoys", "Fire"], ["created_at", "2019-04-07 15:16:44.680745"], ["updated_at", "2019-04-07 15:16:44.680745"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:17:30 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:19:02 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:21:16 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:22:12 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:26:09 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:27:20 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:27:31 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 08:27:38 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-07 10:43:48 -0700
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-07 10:43:59 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 10:44:26 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (42.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 56ms (Views: 6.1ms | ActiveRecord: 48.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 16:24:13 -0700
+  
+LoadError (cannot load such file -- /Users/mac/Desktop/Coding/pokemon-tinder-backend/pokemon_tinder/config/routes.rb):
+  
+bootsnap (1.4.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+bootsnap (1.4.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+activesupport (5.2.3) lib/active_support/dependencies.rb:285:in `block in load'
+activesupport (5.2.3) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.3) lib/active_support/dependencies.rb:285:in `load'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `each'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:41:in `load_paths'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:20:in `reload!'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:30:in `block in updater'
+activesupport (5.2.3) lib/active_support/file_update_checker.rb:83:in `execute'
+railties (5.2.3) lib/rails/application/routes_reloader.rb:10:in `execute'
+railties (5.2.3) lib/rails/application/finisher.rb:143:in `block (2 levels) in <module:Finisher>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `instance_exec'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:606:in `block (2 levels) in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `catch'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `block in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:110:in `run!'
+activesupport (5.2.3) lib/active_support/reloader.rb:115:in `run!'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:72:in `block in run!'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:69:in `tap'
+activesupport (5.2.3) lib/active_support/execution_wrapper.rb:69:in `run!'
+activesupport (5.2.3) lib/active_support/reloader.rb:64:in `run!'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-07 16:26:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-07 16:28:29 -0700
+  [1m[35m (41.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-07 16:28:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pokemons" for ::1 at 2019-04-07 16:28:56 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 16:37:55 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 16:38:01 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 16:39:25 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 16:48:47 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-07 17:10:52 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/pokemons/36" for ::1 at 2019-04-07 17:15:20 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>36, "id"=>"36", "pokemon"=>{}}
+  [1m[36mPokemon Load (2.8ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (4.0ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 36]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 62ms (Views: 0.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 09:56:57 -0700
+  [1m[35m (41.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 09:57:32 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 09:57:47 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Bulbasaur", "age"=>"1", "enjoys"=>"Sunlight", "pokemon"=>{"name"=>"Bulbasaur", "age"=>"1", "enjoys"=>"Sunlight"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (10.4ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bulbasaur"], ["age", 1], ["enjoys", "Sunlight"], ["created_at", "2019-04-08 16:57:47.680481"], ["updated_at", "2019-04-08 16:57:47.680481"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 22ms (Views: 1.6ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:02:56 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:03:23 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 10:03:49 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Charizard", "age"=>"12", "enjoys"=>"Fire", "pokemon"=>{"name"=>"Charizard", "age"=>"12", "enjoys"=>"Fire"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Charizard"], ["age", 12], ["enjoys", "Fire"], ["created_at", "2019-04-08 17:03:49.641707"], ["updated_at", "2019-04-08 17:03:49.641707"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 10:06:13 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Blastoise", "age"=>"19", "enjoys"=>"Water", "pokemon"=>{"name"=>"Blastoise", "age"=>"19", "enjoys"=>"Water"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blastoise"], ["age", 19], ["enjoys", "Water"], ["created_at", "2019-04-08 17:06:13.139140"], ["updated_at", "2019-04-08 17:06:13.139140"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:07:46 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:11:00 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:11:15 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/pokemons/37" for ::1 at 2019-04-08 10:11:28 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>37, "id"=>"37", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 37]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 57ms (Views: 1.6ms | ActiveRecord: 41.6ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 10:11:39 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Bulbasuar", "age"=>"12", "enjoys"=>"Sunlight", "pokemon"=>{"name"=>"Bulbasuar", "age"=>"12", "enjoys"=>"Sunlight"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bulbasuar"], ["age", 12], ["enjoys", "Sunlight"], ["created_at", "2019-04-08 17:11:39.572697"], ["updated_at", "2019-04-08 17:11:39.572697"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:14:34 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:15:17 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:22:59 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.8ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:37:10 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.7ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:37:14 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:37:36 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 10:40:00 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"Pikachu", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"Pikachu", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.7ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pikachu"], ["enjoys", ""], ["created_at", "2019-04-08 17:40:00.670655"], ["updated_at", "2019-04-08 17:40:00.670655"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 45ms (Views: 1.4ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:40:39 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:44:18 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:45:32 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pokemons" for ::1 at 2019-04-08 10:46:14 -0700
+Processing by PokemonsController#index as */*
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pokemons/41" for ::1 at 2019-04-08 10:46:16 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>41, "id"=>"41", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 41]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/pokemons" for ::1 at 2019-04-08 10:46:22 -0700
+Processing by PokemonsController#create as */*
+  Parameters: {"name"=>"k", "age"=>"", "enjoys"=>"", "pokemon"=>{"name"=>"k", "age"=>"", "enjoys"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Create (0.3ms)[0m  [1m[32mINSERT INTO "pokemons" ("name", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "k"], ["enjoys", ""], ["created_at", "2019-04-08 17:46:22.059025"], ["updated_at", "2019-04-08 17:46:22.059025"]]
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:10
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:12
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 6.4ms)
+
+
+Started DELETE "/pokemons/42" for ::1 at 2019-04-08 10:46:23 -0700
+Processing by PokemonsController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "pokemon"=>{}}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pokemons" WHERE "pokemons"."id" = $1[0m  [["id", 42]]
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pokemons_controller.rb:19
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/pokemons_controller.rb:20
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mPokemon Load (0.5ms)[0m  [1m[34mSELECT  "pokemons".* FROM "pokemons" LIMIT $1[0m  [["LIMIT", 11]]
